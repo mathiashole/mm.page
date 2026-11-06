@@ -32,6 +32,10 @@
             z-index: 1;
         }
 
+		#particles-js canvas {
+    		filter: drop-shadow(0 0 6px rgba(88, 166, 255, 0.6));
+		}
+
         /* Tarjeta Principal */
         .profile-card {
             position: relative;
@@ -157,51 +161,52 @@
 
     <!-- Configuración de Partículas -->
     <script>
-        particlesJS("particles-js", {
-            "particles": {
-                "number": { 
-                    "value": 50, 
-                    "density": { "enable": true, "value_area": 800 } 
-                },
-                "color": { "value": "#8b949e" },
-                "shape": { "type": "circle" },
-                "opacity": { 
-                    "value": 0.4, 
-                    "random": true 
-                },
-                "size": { 
-                    "value": 3, 
-                    "random": true 
-                },
-                "line_linked": { 
-                    "enable": true, 
-                    "distance": 150, 
-                    "color": "#30363d", 
-                    "opacity": 0.4, 
-                    "width": 1 
-                },
-                "move": { 
-                    "enable": true, 
-                    "speed": 1.5, 
-                    "direction": "none", 
-                    "random": false, 
-                    "straight": false, 
-                    "out_mode": "out" 
-                }
-            },
-            "interactivity": {
-                "detect_on": "canvas",
-                "events": { 
-                    "onhover": { "enable": true, "mode": "repulse" }, 
-                    "onclick": { "enable": true, "mode": "push" } 
-                },
-                "modes": {
-                    "repulse": { "distance": 100, "duration": 0.4 },
-                    "push": { "particles_nb": 4 }
-                }
-            },
-            "retina_detect": true
-        });
+		particlesJS("particles-js", {
+			"particles": {
+				"number": { 
+					"value": 65, 
+					"density": { "enable": true, "value_area": 800 } 
+				},
+				/* Color brillante en hex */
+				"color": { "value": "#ffffff" }, 
+				"shape": { "type": "circle" },
+				"opacity": { 
+					"value": 0.85, /* Subido de 0.4 a 0.85 para mayor brillo */
+					"random": false 
+				},
+				"size": { 
+					"value": 3.5, 
+					"random": true 
+				},
+				"line_linked": { 
+					"enable": true, 
+					"distance": 140, 
+					"color": "#58a6ff", /* Azul brillante para las redes */
+					"opacity": 0.6,    /* Subido de 0.4 a 0.6 */
+					"width": 1.2 
+				},
+				"move": { 
+					"enable": true, 
+					"speed": 1.5, 
+					"direction": "none", 
+					"random": false, 
+					"straight": false, 
+					"out_mode": "out" 
+				}
+			},
+			"interactivity": {
+				"detect_on": "canvas",
+				"events": { 
+					"onhover": { "enable": true, "mode": "repulse" }, 
+					"onclick": { "enable": true, "mode": "push" } 
+				},
+				"modes": {
+					"repulse": { "distance": 100, "duration": 0.4 },
+					"push": { "particles_nb": 4 }
+				}
+			},
+			"retina_detect": true
+		});
     </script>
 </body>
 </html>
